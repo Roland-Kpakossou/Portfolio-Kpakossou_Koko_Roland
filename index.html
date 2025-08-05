@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roland Kpakossou - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #e5e7eb; 
+            border-radius: 5px;
+        }
+        .progress {
+            height: 100%;
+            background-color: #000000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="fixed w-full z-50">
+        <div class="flex justify-between items-center p-4">
+            <!-- Coin gauche -->
+            <div class="text-xl font-light">
+                Roland K. Kpakossou
+            </div>
+            
+            <!-- Coin droit -->
+            <nav class="flex space-x-6">
+                <a href="#home" class="hover:opacity-70 transition">Accueil</a>
+                <a href="#about" class="hover:opacity-70 transition">À propos</a>
+                <a href="#projects" class="hover:opacity-70 transition">Projets</a>
+                <a href="#contact" class="hover:opacity-70 transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+<!-- Section Accueil -->
+<section id="home" class="min-h-screen flex items-center bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Grande image à gauche -->
+            <div class="lg:w-1/2 flex justify-center">
+                <img src="IMG_9974.jpg" alt="Roland Kpakossou" 
+                     class="rounded-lg w-full max-w-sm md:max-w-xl lg:max-w-2xl image-no-border">
+            </div>
+            
+            <!-- Texte à droite -->
+            <div class="md:w-3/5 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Bonjour, je suis Roland Koko Kpakossou</h1>
+                <h2 class="text-2xl md:text-3xl mb-8">Étudiant en <span class="typing text-black"></span></h2>
+                <a href="#contact" class="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 text-lg">
+                    Contactez-moi
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section A propos -->
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">À propos</h2>
+        <div class="flex flex-col">
+            <div>
+                <p class="text-lg mb-6">
+                    Je suis un étudiant en deuxième année en informatique à l'Université Laval, passionné par la CyberSecurite et le développement logiciel. Explorez mon portfolio pour découvrir mes projets et compétences en développement web, logiciel, et plus encore !
+                </p>
+            </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Compétences</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <span class="font-medium">Java</span>
+                            <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <span class="font-medium">Python</span>
+                            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <span class="font-medium">C++</span>
+                            <div class="progress-bar"><div class="progress" style="width: 79%"></div></div>
+                        </div>
+                        <div>
+                            <span class="font-medium">HTML/CSS</span>
+                            <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                        </div>
+                        <div>
+                            <span class="font-medium">JavaScript</span>
+                            <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mt-8 mb-4">Formation</h3>
+                    <div class="bg-white p-6 rounded-lg border border-black">
+                        <h4 class="text-xl font-medium">Baccalauréat en Informatique</h4>
+                        <p>Université Laval, Québec</p>
+                        <p>Hiver 2024 - Présent</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-black mt-4">
+                        <h4 class="text-xl font-medium">Licence en Informatique (Non complétée)</h4>
+                        <p>École Supérieure d'Administration NDE, Togo</p>
+                        <p>2022 - 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projet-->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg border border-black">
+                    <h3 class="text-2xl font-semibold mb-2">WiFi-Map Analyzer (Java)</h3>
+                    <p>Cartographie des points d'accès WiFi avec calcul de la force du signal, utilisant des structures de données pour optimiser les résultats.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-black">
+                    <h3 class="text-2xl font-semibold mb-2">Portfolio Photographe (HTML/CSS)</h3>
+                    <p>Développement du front-end d'un site web pour un portfolio de photographe, avec un design responsive et une intégration fluide.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-black">
+                    <h3 class="text-2xl font-semibold mb-2">Automatisation de Données (Python/C++)</h3>
+                    <p>Extraction de données via APIs et nettoyage de datasets pour une analyse efficace.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-black">
+                    <h3 class="text-2xl font-semibold mb-2">Jeu de Scrabble (Projet de cours)</h3>
+                    <p>Conception et implémentation d'un jeu de Scrabble en équipe, avec interface utilisateur et logique de jeu.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-black">
+                    <h3 class="text-2xl font-semibold mb-2">Gestion des Élections (C++)</h3>
+                    <p>Développement d'un programme avec héritage et polymorphisme pour modéliser une circonscription électorale, incluant interface graphique Qt et tests unitaires avec Google Test.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12">Contact</h2>
+            <p class="text-lg mb-6">Avez-vous des questions ? Je suis à votre service !</p>
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <div class="bg-white p-6 rounded-lg border border-black">
+                    <h3 class="text-xl font-semibold mb-2">Appellez-moi</h3>
+                    <p>+1 (418) 261-6459</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-black">
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p>rolandkpakossou11@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

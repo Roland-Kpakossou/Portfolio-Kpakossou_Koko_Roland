@@ -92,3 +92,91 @@ main {
         font-size: 1.8rem;
     }
 }
+/* --- Section Expérience Professionnelle ajustée --- */
+#experience {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ligne centrale légèrement raccourcie */
+#experience .bg-gray-400 {
+  opacity: 0.9;
+  height: 105%;
+}
+
+/* Effet au survol de la carte */
+#experience .bg-white {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#experience .bg-white:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Image du logo dans le rond */
+#experience img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Alignement parfait sur la flèche */
+#experience .absolute.left-\[49\.8%\]
+{
+  top: 38px !important; /* Position verticale ajustée */
+}
+
+/* Section contact */
+#contact {
+  background: radial-gradient(circle at top left, #ffffff, #ffffff);
+}
+
+#contact input,
+#contact textarea {
+  transition: all 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  transform: scale(1.02);
+}
+
+#contact button:hover {
+  transform: translateY(-2px);
+}
+
+/* Forcer le fond blanc sur toute la section Contact */
+/* --- Section Contact équilibrée noir & blanc --- */
+#contact {
+  background-color: #f5f5f5; /* gris clair pour contraste */
+}
+
+#contact .bg-white {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .bg-white:hover {
+  transform: scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+#contact input,
+#contact textarea {
+  transition: all 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact button {
+  transition: all 0.3s ease;
+}
+
+#contact button:hover {
+  transform: translateY(-2px);
+}

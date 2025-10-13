@@ -59,9 +59,22 @@
             <div class="md:w-3/5 text-center md:text-left">
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">Bonjour, je suis Roland Koko Kpakossou</h1>
                 <h2 class="text-2xl md:text-3xl mb-8">Étudiant en <span class="typing text-black"></span></h2>
-                <a href="#contact" class="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 text-lg">
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <!-- Bouton Contact -->
+                <a href="#contact" class="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 text-lg transition">
                     Contactez-moi
                 </a>
+
+                <!-- Bouton Télécharger CV -->
+                <a href="CV-IT KPAKOSSOU KOKO ROLAND.pdf" download class="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 text-lg transition">
+                    Télécharger CV
+                </a>
+
+                <!-- Bouton Ouvrir CV -->
+                <a href="CV-IT KPAKOSSOU KOKO ROLAND.pdf" target="_blank" class="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 text-lg transition">
+                    CV
+                </a>
+            </div>
             </div>
         </div>
     </div>
@@ -76,6 +89,44 @@
                 <p class="text-lg mb-6">
                     Je suis un étudiant en deuxième année en informatique à l'Université Laval, passionné par la cybersécurité, le développement logiciel, l’analyse de données et les technologies émergentes. Explorez mon portfolio pour découvrir mes projets et compétences en développement web, logiciel, et plus encore !
                 </p>
+                <!-- Section Expérience professionnelle -->
+                <section id="experience" class="py-20 bg-white text-black relative overflow-hidden">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-4xl font-bold text-center mb-16">Expérience professionnelle</h2>
+
+                    <div class="relative max-w-5xl mx-auto">
+                    <!-- Ligne verticale centrale (raccourcie légèrement) -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 bg-gray-400 w-[3px] h-[105%] rounded-full"></div>
+
+                    <!-- Bloc expérience -->
+                    <div class="relative flex items-center mb-20">
+                        <!-- Rond du logo aligné sur la flèche -->
+                        <div class="absolute left-[49.8%] top-[38px] transform -translate-x-1/2 bg-white w-18 h-18 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-md z-20">
+                        <img src="images.jpeg" alt="AGAT Laboratoire" class="w-10 h-10 object-cover rounded-full">
+                        </div>
+
+                        <!-- Carte d’expérience -->
+                        <div class="ml-[56%] w-[42%] relative">
+                        <div class="relative bg-white border border-gray-300 shadow-lg p-6 rounded-lg">
+                            <!-- Flèche -->
+                            <div class="absolute left-[-10px] top-[40px] w-0 h-0 border-t-[10px] border-b-[10px] border-r-[10px] border-transparent border-r-gray-300"></div>
+
+                            <h3 class="text-2xl font-semibold mb-2">Assistant de laboratoire</h3>
+                            <p class="text-lg font-medium text-gray-700">AGAT Laboratoire – Québec</p>
+                            <p class="text-sm text-gray-500 mb-4">Mai 2024 – Présent</p>
+                            <ul class="list-disc ml-5 space-y-2 text-gray-700">
+                            <li>Préparation et analyse d’échantillons selon les protocoles de laboratoire.</li>
+                            <li>Utilisation d’instruments de mesure et logiciels d’analyse scientifique.</li>
+                            </ul>
+                        </div>
+                        </div>
+
+                        <!-- Espace vide à droite -->
+                        <div class="w-1/2"></div>
+                    </div>
+                    </div>
+                </div>
+                </section>
             </div>
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-semibold mb-4">Compétences</h3>
@@ -116,7 +167,7 @@
                         <p>Hiver 2024 - Présent</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg border border-black mt-4">
-                        <h4 class="text-xl font-medium">Licence en Informatique</h4>
+                        <h4 class="text-xl font-medium">Licence en Genie logiciel</h4>
                         <p>École Supérieure d'Administration NDE, Togo</p>
                         <p>2022 - 2023</p>
                     </div>
@@ -156,29 +207,71 @@
                     <p>Développement d'un programme avec héritage et polymorphisme pour modéliser une circonscription électorale, incluant interface graphique Qt et tests unitaires avec Google Test.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">Creation d'une plateforme de banque virtuelle</h3>
+                    <h3 class="text-2xl font-semibold mb-2">Creation d'une plateforme de banque virtuelle (Python)</h3>
                     <p>developement d'une application d'envoie et de retrait d'argent avec un interface simple et intuitif</p>
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- Section Contact -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-12">Contact</h2>
-            <p class="text-lg mb-6">Avez-vous des questions ? Je suis à votre service !</p>
-            <div class="flex flex-col md:flex-row justify-center gap-8">
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-xl font-semibold mb-2">Discord</h3>
-                    <p>@roland011</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-xl font-semibold mb-2">Email</h3>
-                    <p>rolandkpakossou11@gmail.com</p>
-                </div>
-            </div>
+<!-- Section Contact -->
+<section id="contact" class="py-20 bg-gray-100 text-black">
+  <div class="container mx-auto px-4 max-w-2xl">
+    <div class="bg-white border border-gray-300 p-10 rounded-2xl shadow-md">
+      <p class="uppercase tracking-widest text-sm text-gray-500 mb-2">Prendre contact</p>
+      <h2 class="text-5xl font-extrabold mb-10 text-black">Contact<span class="text-gray-600">.</span></h2>
+
+      <form action="https://formspree.io/f/mnngobjb" method="POST" class="space-y-6">
+        <!-- Nom -->
+        <div>
+          <label for="name" class="block text-sm font-semibold mb-2">Votre Nom</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Quel est votre nom ? 👀" 
+            required
+            class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+          >
         </div>
-    </section>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-2">Votre Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Quel est votre email ? 👀" 
+            required
+            class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+          >
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-sm font-semibold mb-2">Votre Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5"
+            placeholder="Écrivez votre message 😉 ..." 
+            required
+            class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+          ></textarea>
+        </div>
+
+        <!-- Bouton -->
+        <button 
+          type="submit"
+          class="bg-black hover:bg-gray-800 text-white px-10 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+        >
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
     <script src="script.js"></script>
 </body>
 </html>

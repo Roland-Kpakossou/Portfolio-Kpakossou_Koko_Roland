@@ -1,7 +1,7 @@
 // Animation Typed.js
 document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed(".typing", {
-        strings: ["Informatique", "Cybersécurité", "Développement Logiciel"],
+        strings: ["Informatique", "Cybersécurité", "Inteligence Artificielle"],
         typeSpeed: 50,
         backSpeed: 30,
         startDelay: 500,

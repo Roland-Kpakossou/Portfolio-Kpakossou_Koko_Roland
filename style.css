@@ -1,3 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #e5e7eb; 
+    border-radius: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+/* Styles pour le header */
 header {
     background-color: transparent !important;
     backdrop-filter: none;
@@ -12,7 +32,7 @@ header a {
     text-decoration: none;
 }
 
-/* Pour le texte blanc sur fond sombre ou inversÃ© selon le scroll */
+/* Pour le texte blanc sur fond sombre ou inversé selon le scroll */
 .scrolled header {
     color: white;
 }
@@ -22,6 +42,7 @@ main {
     padding-top: 60px;
 }
 
+/* Styles pour l'image de la section home */
 #home img {
     border: 6px solid white;
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
@@ -34,13 +55,14 @@ main {
     transform: scale(1.03);
     box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
+
 .image-no-border {
     border: none !important;
     box-shadow: none !important;
     background-color: transparent;
 }
 
-/* Fond unifiÃ© */
+/* Fond unifié */
 #home {
     background-color: #f8f9fa;
 }
@@ -54,7 +76,36 @@ main {
     transform: scale(1.01);
 }
 
-/* Correction animation typing */
+/* Styles pour la flèche centrale */
+.scroll-arrow {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.scroll-arrow:hover {
+    transform: translateY(5px);
+    color: #4b5563;
+}
+
+.scroll-arrow:hover span {
+    color: #4b5563;
+}
+
+/* Animation personnalisée pour la flèche */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Animation typing */
 .typed-cursor {
     opacity: 1;
     animation: blink 0.7s infinite;
@@ -71,6 +122,7 @@ main {
     font-weight: bold;
     color: #2c3e50; 
 }
+
 /* Ajustements responsive */
 @media (max-width: 1024px) {
     #home img {
@@ -91,8 +143,22 @@ main {
     #home h2 {
         font-size: 1.8rem;
     }
+    
+    .scroll-arrow {
+        margin-top: 20px;
+    }
+    
+    .scroll-arrow span {
+        font-size: 0.875rem;
+    }
+    
+    .scroll-arrow svg {
+        width: 8px;
+        height: 8px;
+    }
 }
-/* --- Section Expérience Professionnelle ajustée --- */
+
+/* Section Expérience Professionnelle ajustée */
 #experience {
   background-color: #ffffff;
   position: relative;
@@ -147,7 +213,6 @@ main {
 }
 
 /* Forcer le fond blanc sur toute la section Contact */
-/* --- Section Contact équilibrée noir & blanc --- */
 #contact {
   background-color: #f5f5f5; /* gris clair pour contraste */
 }
@@ -179,4 +244,68 @@ main {
 
 #contact button:hover {
   transform: translateY(-2px);
+}
+
+/* Styles pour les sections générales */
+section {
+    scroll-margin-top: 80px; /* Pour compenser le header fixe lors du scroll */
+}
+
+/* Amélioration de la lisibilité */
+.text-lg {
+    line-height: 1.6;
+}
+
+/* Styles pour les cartes de projet */
+.bg-white.rounded-lg.border.border-black {
+    transition: all 0.3s ease;
+}
+
+.bg-white.rounded-lg.border.border-black:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les barres de progression */
+.progress-bar {
+    overflow: hidden;
+}
+
+.progress {
+    transition: width 0.8s ease-in-out;
+}
+
+/* Animation d'apparition des éléments */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive pour les très petits écrans */
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 2rem;
+    }
+    
+    #home h2 {
+        font-size: 1.5rem;
+    }
+    
+    .scroll-arrow {
+        margin-top: 30px;
+    }
+    
+    .scroll-arrow span {
+        font-size: 0.75rem;
+    }
 }

@@ -291,6 +291,63 @@ section {
     }
 }
 
+/* Styles pour le panel admin */
+#admin-stats {
+    z-index: 1000;
+    font-size: 0.875rem;
+    min-width: 200px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+#admin-btn {
+    z-index: 1000;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Animation pour l'apparition du panel admin */
+#admin-stats {
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive pour le panel admin */
+@media (max-width: 768px) {
+    #admin-stats {
+        bottom: 70px;
+        right: 10px;
+        left: 10px;
+        max-width: calc(100% - 20px);
+    }
+    
+    #admin-btn {
+        bottom: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
 /* Responsive pour les très petits écrans */
 @media (max-width: 480px) {
     #home h1 {
@@ -307,5 +364,15 @@ section {
     
     .scroll-arrow span {
         font-size: 0.75rem;
+    }
+    
+    #admin-stats {
+        padding: 12px;
+    }
+    
+    #admin-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 }

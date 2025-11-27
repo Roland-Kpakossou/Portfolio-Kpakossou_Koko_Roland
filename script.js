@@ -37,37 +37,91 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialiser le compteur de visites
-    updateVisitCount();
-    
-    // Vérifier si c'est une nouvelle visite (stockage local)
-    if (!localStorage.getItem('visited')) {
-        localStorage.setItem('visited', 'true');
-        // La visite sera comptée via l'appel API
-    }
+    // Initialiser le compteur de visites IMMÉDIATEMENT au chargement
+    initializeCounter();
 });
 
-// Compteur de visites avec CountAPI
-function updateVisitCount() {
-    const namespace = 'portfolio-kpakossou';
-    const key = 'visits';
+// ===== SYSTÈME DE COMPTEUR AMÉLIORÉ =====
+
+let visitData = {
+    totalVisits: 0,
+    uniqueVisits: 0,
+    lastVisit: null
+};
+
+// Initialisation du compteur
+function initializeCounter() {
+    loadVisitData();
     
-    // Incrémenter le compteur
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log('Nombre de visites:', data.value);
-        })
-        .catch(error => console.error('Erreur compteur:', error));
+    // Vérifier si c'est une nouvelle visite
+    const today = new Date().toDateString();
+    const lastVisitDate = visitData.lastVisit ? new Date(visitData.lastVisit).toDateString() : null;
     
-    // Récupérer le nombre actuel
-    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('visit-count').textContent = data.value;
-        })
-        .catch(error => console.error('Erreur récupération:', error));
+    // Incrémenter le compteur total à chaque chargement
+    visitData.totalVisits++;
+    
+    // Vérifier si c'est une visite unique (nouveau jour ou première visite)
+    if (!lastVisitDate || lastVisitDate !== today) {
+        visitData.uniqueVisits++;
+        visitData.lastVisit = new Date().toISOString();
+    }
+    
+    // Sauvegarder les données mises à jour
+    saveVisitData();
+    
+    // Mettre à jour l'affichage si le panel admin est ouvert
+    updateCounterDisplay();
+    
+    console.log('Visite enregistrée - Total:', visitData.totalVisits, 'Uniques:', visitData.uniqueVisits);
 }
+
+// Charger les données depuis le localStorage
+function loadVisitData() {
+    const saved = localStorage.getItem('portfolioVisitData');
+    if (saved) {
+        try {
+            visitData = JSON.parse(saved);
+        } catch (e) {
+            console.error('Erreur chargement données:', e);
+            resetVisitData();
+        }
+    } else {
+        resetVisitData();
+    }
+}
+
+// Sauvegarder les données dans le localStorage
+function saveVisitData() {
+    try {
+        localStorage.setItem('portfolioVisitData', JSON.stringify(visitData));
+    } catch (e) {
+        console.error('Erreur sauvegarde données:', e);
+    }
+}
+
+// Réinitialiser les données de visite
+function resetVisitData() {
+    visitData = {
+        totalVisits: 0,
+        uniqueVisits: 0,
+        lastVisit: null
+    };
+}
+
+// Mettre à jour l'affichage du compteur
+function updateCounterDisplay() {
+    const visitCountElement = document.getElementById('visit-count');
+    const uniqueVisitsElement = document.getElementById('unique-visits');
+    
+    if (visitCountElement) {
+        visitCountElement.textContent = visitData.totalVisits;
+    }
+    if (uniqueVisitsElement) {
+        uniqueVisitsElement.textContent = visitData.uniqueVisits;
+    }
+}
+
+// ===== FONCTIONS ADMIN =====
 
 // Fonctions pour le panel admin
 function showAdminPanel() {
@@ -75,7 +129,7 @@ function showAdminPanel() {
     // Changez 'admin123' par le mot de passe que vous souhaitez
     if (password === 'admin123') {
         document.getElementById('admin-stats').classList.remove('hidden');
-        updateVisitCount(); // Mettre à jour l'affichage
+        updateCounterDisplay(); // Mettre à jour l'affichage
     } else {
         alert('Mot de passe incorrect');
     }
@@ -85,16 +139,12 @@ function hideStats() {
     document.getElementById('admin-stats').classList.add('hidden');
 }
 
-// Fonction pour réinitialiser le compteur (optionnel)
+// Fonction pour réinitialiser le compteur
 function resetCounter() {
-    const namespace = 'portfolio-kpakossou';
-    const key = 'visits';
-    
-    fetch(`https://api.countapi.xyz/set/${namespace}/${key}?value=0`)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('visit-count').textContent = data.value;
-            alert('Compteur réinitialisé à 0');
-        })
-        .catch(error => console.error('Erreur réinitialisation:', error));
+    if (confirm('Êtes-vous sûr de vouloir réinitialiser le compteur ?')) {
+        resetVisitData();
+        saveVisitData();
+        updateCounterDisplay();
+        alert('Compteur réinitialisé à 0');
+    }
 }

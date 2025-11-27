@@ -286,7 +286,11 @@
     <div id="admin-stats" class="fixed bottom-4 right-4 bg-black text-white p-4 rounded-lg shadow-lg hidden z-50">
         <h3 class="font-bold mb-2 text-sm">Statistiques du site</h3>
         <p class="text-xs">Visites totales: <span id="visit-count" class="font-bold">0</span></p>
-        <button onclick="hideStats()" class="mt-2 text-xs bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">Fermer</button>
+        <p class="text-xs">Visites uniques: <span id="unique-visits" class="font-bold">0</span></p>
+        <div class="flex space-x-2 mt-2">
+            <button onclick="hideStats()" class="text-xs bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">Fermer</button>
+            <button onclick="resetCounter()" class="text-xs bg-red-600 px-2 py-1 rounded hover:bg-red-500">Reset</button>
+        </div>
     </div>
 
     <!-- Bouton d'accès admin (caché) -->

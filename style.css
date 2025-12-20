@@ -1,28 +1,34 @@
+/* ===== RESET & BASE ===== */
 body {
     font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
     background-color: #FFFFFF;
     color: #000000;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 .progress-bar {
     height: 10px;
-    background-color: #e5e7eb; 
+    background-color: #e5e7eb;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .progress {
     height: 100%;
     background-color: #000000;
     border-radius: 5px;
+    transition: width 0.8s ease-in-out;
 }
 
-/* Styles pour le header */
+/* ===== HEADER & NAVIGATION ===== */
 header {
     background-color: transparent !important;
     backdrop-filter: none;
     border: none !important;
     box-shadow: none !important;
+    padding: 15px 20px;
 }
 
 header a {
@@ -30,25 +36,28 @@ header a {
     font-size: 1rem;
     color: inherit;
     text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
-/* Pour le texte blanc sur fond sombre ou inversé selon le scroll */
 .scrolled header {
     color: white;
 }
 
-/* Espacement du contenu principal pour compenser le header fixe */
-main {
-    padding-top: 60px;
+/* ===== SECTION HOME ===== */
+#home {
+    background-color: #f8f9fa;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-/* Styles pour l'image de la section home */
 #home img {
     border: 6px solid white;
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     transition: all 0.4s ease;
     object-fit: cover;
-    aspect-ratio: 3/4; /* Conserve les proportions portrait */
+    aspect-ratio: 3/4;
+    max-width: 100%;
+    height: auto;
 }
 
 #home img:hover {
@@ -60,15 +69,6 @@ main {
     border: none !important;
     box-shadow: none !important;
     background-color: transparent;
-}
-
-/* Fond unifié */
-#home {
-    background-color: #f8f9fa;
-}
-
-/* Animation fluide */
-.image-no-border {
     transition: transform 0.3s ease-out;
 }
 
@@ -76,7 +76,7 @@ main {
     transform: scale(1.01);
 }
 
-/* Styles pour la flèche centrale */
+/* Flèche centrale */
 .scroll-arrow {
     transition: all 0.3s ease;
     cursor: pointer;
@@ -91,14 +91,10 @@ main {
     color: #4b5563;
 }
 
-/* Animation personnalisée pour la flèche */
+/* Animation flèche */
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .animate-bounce {
@@ -120,145 +116,100 @@ main {
 
 .typing {
     font-weight: bold;
-    color: #2c3e50; 
+    color: #2c3e50;
 }
 
-/* Ajustements responsive */
-@media (max-width: 1024px) {
-    #home img {
-        max-width: 500px;
-    }
-}
-
-@media (max-width: 768px) {
-    #home img {
-        max-width: 350px;
-        margin-bottom: 30px;
-    }
-    
-    #home h1 {
-        font-size: 2.5rem;
-    }
-    
-    #home h2 {
-        font-size: 1.8rem;
-    }
-    
-    .scroll-arrow {
-        margin-top: 20px;
-    }
-    
-    .scroll-arrow span {
-        font-size: 0.875rem;
-    }
-    
-    .scroll-arrow svg {
-        width: 8px;
-        height: 8px;
-    }
-}
-
-/* Section Expérience Professionnelle ajustée */
+/* ===== SECTION EXPÉRIENCE (DESKTOP) ===== */
 #experience {
-  background-color: #ffffff;
-  position: relative;
-  overflow: hidden;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
 }
 
-/* Ligne centrale légèrement raccourcie */
 #experience .bg-gray-400 {
-  opacity: 0.9;
-  height: 105%;
+    opacity: 0.9;
+    height: 105%;
 }
 
-/* Effet au survol de la carte */
 #experience .bg-white {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #experience .bg-white:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Image du logo dans le rond */
 #experience img {
-  border-radius: 50%;
-  object-fit: cover;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Alignement parfait sur la flèche */
-#experience .absolute.left-\[49\.8%\]
-{
-  top: 38px !important; /* Position verticale ajustée */
-}
-
-/* Section contact */
+/* ===== SECTION CONTACT ===== */
 #contact {
-  background: radial-gradient(circle at top left, #ffffff, #ffffff);
-}
-
-#contact input,
-#contact textarea {
-  transition: all 0.3s ease;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  transform: scale(1.02);
-}
-
-#contact button:hover {
-  transform: translateY(-2px);
-}
-
-/* Forcer le fond blanc sur toute la section Contact */
-#contact {
-  background-color: #f5f5f5; /* gris clair pour contraste */
+    background-color: #f5f5f5;
+    padding: 60px 0;
 }
 
 #contact .bg-white {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #contact .bg-white:hover {
-  transform: scale(1.01);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 #contact input,
 #contact textarea {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #contact input:focus,
 #contact textarea:focus {
-  background-color: #ffffff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 #contact button {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #contact button:hover {
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
-/* Styles pour les sections générales */
+/* ===== SECTIONS GÉNÉRALES ===== */
 section {
-    scroll-margin-top: 80px; /* Pour compenser le header fixe lors du scroll */
+    scroll-margin-top: 80px;
+    padding: 60px 0;
+    box-sizing: border-box;
 }
 
-/* Amélioration de la lisibilité */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 .text-lg {
     line-height: 1.6;
+    font-size: 1.125rem;
 }
 
-/* Styles pour les cartes de projet */
+/* Cartes de projet */
 .bg-white.rounded-lg.border.border-black {
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .bg-white.rounded-lg.border.border-black:hover {
@@ -266,16 +217,7 @@ section {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles pour les barres de progression */
-.progress-bar {
-    overflow: hidden;
-}
-
-.progress {
-    transition: width 0.8s ease-in-out;
-}
-
-/* Animation d'apparition des éléments */
+/* Animation d'apparition */
 .fade-in {
     animation: fadeIn 0.8s ease-in-out;
 }
@@ -291,9 +233,7 @@ section {
     }
 }
 
-/* ===== STYLES AMÉLIORÉS POUR LE COMPTEUR ===== */
-
-/* Styles pour le panel admin */
+/* ===== PANEL ADMIN ===== */
 #admin-stats {
     z-index: 1000;
     font-size: 0.875rem;
@@ -303,6 +243,7 @@ section {
     border: 1px solid #333;
     border-radius: 8px;
     padding: 16px;
+    box-sizing: border-box;
 }
 
 #admin-stats h3 {
@@ -337,6 +278,7 @@ section {
     border: 1px solid #555;
     background-color: rgba(0, 0, 0, 0.8);
     transition: all 0.3s ease;
+    border-radius: 50%;
 }
 
 #admin-btn:hover {
@@ -345,43 +287,11 @@ section {
     opacity: 1 !important;
 }
 
-/* Boutons du panel admin */
-#admin-stats button {
-    transition: all 0.2s ease;
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-}
-
-#admin-stats button:hover {
-    transform: translateY(-1px);
-}
-
-#admin-stats button:first-of-type {
-    background-color: #4b5563;
-    color: white;
-}
-
-#admin-stats button:first-of-type:hover {
-    background-color: #6b7280;
-}
-
-#admin-stats button:last-of-type {
-    background-color: #dc2626;
-    color: white;
-}
-
-#admin-stats button:last-of-type:hover {
-    background-color: #ef4444;
-}
-
 .hidden {
     display: none !important;
 }
 
-/* Animation pour l'apparition du panel admin */
+/* Animation panel admin */
 #admin-stats {
     animation: slideInUp 0.3s ease-out;
 }
@@ -397,21 +307,234 @@ section {
     }
 }
 
-/* Container pour les boutons admin */
-#admin-stats .flex.space-x-2 {
-    margin-top: 12px;
-    display: flex;
-    gap: 8px;
+/* ===== RESPONSIVE - TABLETTE (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+    #home img {
+        max-width: 400px;
+    }
+    
+    .container {
+        padding: 0 30px;
+    }
+    
+    #experience .ml-\[56\%\],
+    #experience .mr-\[56\%\] {
+        width: 45% !important;
+    }
 }
 
-/* Responsive pour le panel admin */
+/* ===== RESPONSIVE - MOBILE (≤ 768px) ===== */
 @media (max-width: 768px) {
+    /* Reset général mobile */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Header */
+    header {
+        padding: 12px 15px;
+    }
+    
+    header nav {
+        display: flex;
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Section Home */
+    #home {
+        padding: 40px 0;
+    }
+    
+    #home h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    #home h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 30px;
+    }
+    
+    #home img {
+        max-width: 280px;
+        margin: 0 auto 30px;
+    }
+    
+    .flex-col.md\:flex-row {
+        flex-direction: column;
+    }
+    
+    /* ===== SECTION EXPÉRIENCE MOBILE - BARRE LATÉRALE VISIBLE ===== */
+    #experience {
+        padding: 40px 0;
+        position: relative;
+    }
+    
+    /* BARRE LATÉRALE VISIBLE SUR MOBILE */
+    #experience .bg-gray-400 {
+        display: block !important;
+        position: absolute;
+        left: 25px !important;
+        transform: none !important;
+        width: 3px !important;
+        height: calc(100% - 80px) !important;
+        top: 40px !important;
+        background: linear-gradient(to bottom, #9ca3af, #d1d5db) !important;
+        z-index: 1;
+    }
+    
+    /* Points sur la barre latérale */
+    #experience .bg-gray-400::before,
+    #experience .bg-gray-400::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: #4b5563;
+        border-radius: 50%;
+        left: -4.5px;
+        border: 2px solid white;
+    }
+    
+    #experience .bg-gray-400::before {
+        top: 0;
+    }
+    
+    #experience .bg-gray-400::after {
+        bottom: 0;
+    }
+    
+    #experience .relative.max-w-5xl.mx-auto {
+        padding: 0 15px 0 50px; /* Espace pour la barre */
+        position: relative;
+    }
+    
+    /* Réorganise en colonne avec la barre à gauche */
+    #experience .relative.flex.items-center {
+        flex-direction: column !important;
+        margin-bottom: 40px !important;
+        width: 100% !important;
+        position: relative;
+    }
+    
+    /* Points sur la barre pour chaque expérience */
+    #experience .relative.flex.items-center::before {
+        content: '';
+        position: absolute;
+        left: -35px; /* Aligné avec la barre */
+        top: 25px;
+        width: 12px;
+        height: 12px;
+        background-color: #3b82f6;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        z-index: 2;
+    }
+    
+    /* Cache les logos ronds sur mobile */
+    #experience .absolute.left-\[49\.8\%\] {
+        display: none !important;
+    }
+    
+    /* Cartes d'expérience pleine largeur */
+    #experience .ml-\[56\%\],
+    #experience .mr-\[56\%\] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* Cache les flèches originales */
+    #experience .absolute.left-\[-10px\],
+    #experience .absolute.right-\[-10px\] {
+        display: none !important;
+    }
+    
+    /* Style des cartes */
+    #experience .bg-white.rounded-lg {
+        margin: 0 !important;
+        padding: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        border-left: 3px solid #3b82f6; /* Ligne colorée à gauche */
+    }
+    
+    /* Titres des cartes */
+    #experience h3 {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+    
+    /* Indicateur de date sur mobile */
+    #experience .text-sm.text-gray-500 {
+        display: inline-block;
+        background-color: #f3f4f6;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    
+    /* Section Compétences et Formation */
+    .md\:w-1\/2 {
+        width: 100% !important;
+        margin-top: 40px;
+    }
+    
+    .space-y-4 {
+        gap: 15px;
+    }
+    
+    /* Cartes de formation */
+    .bg-white.p-6.rounded-lg.border.border-black {
+        margin-bottom: 20px;
+        padding: 20px !important;
+    }
+    
+    /* Section Projets */
+    .grid.grid-cols-1.md\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .bg-white.p-6.rounded-lg.border.border-black {
+        padding: 20px !important;
+        margin-bottom: 15px;
+    }
+    
+    /* Section Contact */
+    #contact .max-w-2xl {
+        padding: 0 15px;
+    }
+    
+    #contact .p-10 {
+        padding: 25px !important;
+    }
+    
+    /* Boutons */
+    a.bg-black.text-white {
+        padding: 14px 28px !important;
+        font-size: 1rem !important;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    /* Panel Admin */
     #admin-stats {
         bottom: 70px;
         right: 10px;
         left: 10px;
         max-width: calc(100% - 20px);
         min-width: auto;
+        padding: 12px;
     }
     
     #admin-btn {
@@ -420,37 +543,97 @@ section {
         width: 45px;
         height: 45px;
     }
-    
-    #admin-stats h3 {
-        font-size: 0.9rem;
-    }
-    
-    #admin-stats p {
-        font-size: 0.75rem;
-    }
 }
 
+/* ===== RESPONSIVE - PETIT MOBILE (≤ 480px) ===== */
 @media (max-width: 480px) {
+    /* Header */
+    header .text-xl {
+        font-size: 1.1rem;
+    }
+    
+    header nav {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+    
+    /* Section Home */
     #home h1 {
-        font-size: 2rem;
+        font-size: 1.7rem !important;
+        padding: 0 10px;
     }
     
     #home h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem !important;
+        padding: 0 10px;
     }
     
-    .scroll-arrow {
-        margin-top: 30px;
+    #home img {
+        max-width: 250px !important;
     }
     
-    .scroll-arrow span {
-        font-size: 0.75rem;
+    /* Conteneurs */
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
     
-    #admin-stats {
-        padding: 12px;
+    /* Sections */
+    section {
+        padding: 40px 0 !important;
     }
     
+    /* Texte général */
+    .text-lg {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+    
+    /* Section Expérience Mobile - Ajustements */
+    #experience .bg-gray-400 {
+        left: 20px !important;
+        width: 2px !important;
+    }
+    
+    #experience .relative.max-w-5xl.mx-auto {
+        padding: 0 15px 0 40px;
+    }
+    
+    /* Points plus petits */
+    #experience .relative.flex.items-center::before {
+        left: -28px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Cartes */
+    .bg-white.p-6.rounded-lg {
+        padding: 18px !important;
+    }
+    
+    #experience .bg-white.rounded-lg {
+        padding: 18px !important;
+    }
+    
+    /* Barres de progression */
+    .progress-bar {
+        height: 8px !important;
+    }
+    
+    /* Formulaire */
+    #contact input,
+    #contact textarea {
+        padding: 14px !important;
+        font-size: 16px !important; /* Évite le zoom auto iOS */
+    }
+    
+    #contact button {
+        width: 100%;
+        padding: 16px !important;
+    }
+    
+    /* Panel Admin */
     #admin-btn {
         width: 40px;
         height: 40px;
@@ -464,22 +647,118 @@ section {
     
     #admin-stats button {
         width: 100%;
-        padding: 6px;
+        padding: 8px;
     }
 }
 
-/* Styles pour les très grands écrans */
-@media (min-width: 1440px) {
-    #admin-stats {
-        min-width: 240px;
+/* ===== RESPONSIVE - TRÈS PETIT (≤ 360px) ===== */
+@media (max-width: 360px) {
+    #home h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    #home h2 {
+        font-size: 1.1rem !important;
+    }
+    
+    header .text-xl {
         font-size: 1rem;
     }
     
-    #admin-stats h3 {
-        font-size: 1.1rem;
+    header nav a {
+        font-size: 0.75rem;
     }
     
-    #admin-stats p {
-        font-size: 0.9rem;
+    .text-lg {
+        font-size: 0.95rem;
+    }
+    
+    /* Section Expérience - Ajustements finaux */
+    #experience .bg-gray-400 {
+        left: 18px !important;
+    }
+    
+    #experience .relative.max-w-5xl.mx-auto {
+        padding: 0 12px 0 35px;
+    }
+    
+    #experience .relative.flex.items-center::before {
+        left: -25px;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* ===== ORDRE CHRONOLOGIQUE SUR MOBILE ===== */
+@media (max-width: 768px) {
+    /* S'assurer que l'ordre HTML est respecté sur mobile */
+    #experience .relative.max-w-5xl.mx-auto {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Premier élément dans le HTML (Succès Scolaires) */
+    #experience .relative.flex.items-center:first-of-type {
+        order: 1;
+        margin-top: 0;
+    }
+    
+    /* Deuxième élément dans le HTML (AGAT) */
+    #experience .relative.flex.items-center:last-of-type {
+        order: 2;
+        margin-top: 20px;
+    } 
+    
+    /* Indicateur "Plus récent" pour l'élément qui a "Novembre 2025" */
+    #experience .relative.flex.items-center .text-sm.text-gray-500:contains("Novembre")::before {
+        content: '';
+        color: #10b981;
+        font-weight: bold;
+        margin-right: 4px;
+    }
+    
+    /* Alternative si :contains ne fonctionne pas */
+    #experience .relative.flex.items-center:first-of-type .text-sm.text-gray-500::before {
+        content: ' ';
+        color: #10b981;
+        font-weight: bold;
+        margin-right: 4px;
+    }
+}
+
+/* ===== UTILITAIRES ===== */
+.mb-6 {
+    margin-bottom: 24px !important;
+}
+
+.mt-8 {
+    margin-top: 32px !important;
+}
+
+.space-y-4 > * + * {
+    margin-top: 16px;
+}
+
+/* Correction pour éviter les débordements */
+* {
+    max-width: 100%;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Correction pour les mots longs */
+h1, h2, h3, h4, p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Scroll smooth pour mobile */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }

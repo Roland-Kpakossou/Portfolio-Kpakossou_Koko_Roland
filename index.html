@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Roland Kpakossou - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,9 +60,9 @@
                     <h2 class="text-2xl md:text-3xl mb-8">Étudiant en <span class="typing text-black"></span></h2>
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
                         <!-- Bouton Contact -->
-                        <a href="#contact" class="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 text-lg transition">
-                            Contactez-moi
-                        </a>
+                    <p class="text-lg mb-6">
+                        Je suis un étudiant en troisième année en informatique à l'Université Laval, passionné par le développement logiciel, la cybersécurité, l'analyse de données et les technologies émergentes. Je développe des solutions innovantes en combinant technique rigoureuse et approche méthodique pour résoudre des défis complexes. Explorez mon portfolio pour découvrir mes projets et compétences en développement logiciel et plus encore !
+                    </p>
                     </div>
                 </div>
             </div>
@@ -80,84 +79,72 @@
         </div>
     </section>
 
-    <!-- Section A propos -->
+    <!-- Section À propos -->
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">À propos</h2>
             <div class="flex flex-col">
                 <div>
                     <p class="text-lg mb-6">
-                        Je suis un étudiant en deuxième année en informatique à l'Université Laval, passionné par la cybersécurité, l'intellligence artificielle , l'analyse de données et les technologies émergentes. Je développe des solutions innovantes en combinant technique rigoureuse et approche méthodique pour résoudre des défis complexes. Explorez mon portfolio pour découvrir mes projets et compétences en développement logiciel et plus encore !
+                        J'ai eu l'opportunité de créer une variété d'applications qui résolvent des problèmes réels. Chaque projet m'a permis d'élargir mes compétences et de travailler avec différentes technologies. De la création d'applications au développement de systèmes backend complexes, mon expérience démontre ma polyvalence et mon engagement envers la qualité.
                     </p>
-                    <!-- Section Expérience professionnelle -->
-                    <section id="experience" class="py-20 bg-white text-black relative overflow-hidden">
+                    
+                    <!-- Section Projets -->
+                    <section id="projects" class="py-20 bg-white">
                         <div class="container mx-auto px-4">
-                            <h2 class="text-4xl font-bold text-center mb-16">Expérience professionnelle</h2>
-
-                            <div class="relative max-w-5xl mx-auto">
-                                <!-- Ligne verticale centrale (plus longue) -->
-                                <div class="absolute left-1/2 transform -translate-x-1/2 bg-gray-400 w-[3px] h-[250%] rounded-full"></div>
-
-                                <!-- ===== BLOC SUCCÈS SCOLAIRES EN PREMIER (PLUS RÉCENT) ===== -->
-                                <div class="relative flex items-center mb-20">
-                                    <!-- Logo Succès Scolaires -->
-                                    <div class="absolute left-[49.8%] top-[45px] transform -translate-x-1/2 bg-white w-18 h-18 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-md z-20">
-                                        <img src="LOGO FINAL.png" alt="Succès Scolaires" class="w-10 h-10 object-cover rounded-full">
-                                    </div>
-                                    
-                                    <!-- Carte Succès Scolaires (DROITE - parce que premier) -->
-                                    <div class="ml-[56%] w-[42%] relative">
-                                        <div class="relative bg-white border border-gray-300 shadow-lg p-6 rounded-lg">
-                                            <!-- Flèche GAUCHE -->
-                                            <div class="absolute left-[-10px] top-[45px] w-0 h-0 border-t-[10px] border-b-[10px] border-r-[10px] border-transparent border-r-gray-300"></div>
-                                            
-                                            <h3 class="text-2xl font-semibold mb-2">Tuteur en mathématiques et physiques</h3>
-                                            <p class="text-lg font-medium text-gray-700">Succès scolaire</p>
-                                            <p class="text-sm text-gray-500 mb-4">Novembre 2025 – Présent</p>
-                                            <ul class="list-disc ml-5 space-y-2 text-gray-700">
-                                                <li>Enseignement individualisé des mathématiques aux élèves</li>
-                                                <li>Création de plans d'apprentissage personnalisés.</li>
-                                                <li>Suivi des progrès et préparation aux examens.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <h2 class="text-4xl font-bold text-center mb-12">Projets</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="bg-white p-6 rounded-lg border border-black">
+                                    <h3 class="text-2xl font-semibold mb-2">Sports-par-Bus – Système de Gestion de Voyages Sportifs</h3>
+                                    <p>Développement full-stack d'une plateforme web complète permettant aux équipes sportives de gérer leurs déplacements. 
+                                        Conception d'une base de données MySQL normalisée avec des procédures stockées PL-SQL pour optimiser les requêtes complexes. 
+                                        L'application PHP sécurisée implémente un système d'authentification à trois niveaux (administrateur, entraîneur, 
+                                        joueur) avec gestion des réservations en temps réel, génération automatique de factures et tableaux de bord statistiques. 
+                                        Le projet inclut des mesures de sécurité contre les injections SQL et les attaques XSS.
+                                    </p>
                                 </div>
-                                <!-- FIN BLOC SUCCÈS SCOLAIRES -->
-
-                                <!-- Espacement supplémentaire -->
-                                <div class="mt-24">
-                                
-                                <!-- ===== BLOC AGAT EN SECOND (MOINS RÉCENT) ===== -->
-                                <div class="relative flex items-center mb-20">
-                                    <!-- Logo AGAT -->
-                                    <div class="absolute left-[49.8%] top-[45px] transform -translate-x-1/2 bg-white w-18 h-18 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-md z-20">
-                                        <img src="images.jpeg" alt="AGAT Laboratoire" class="w-10 h-10 object-cover rounded-full">
-                                    </div>
-                                    
-                                    <!-- Carte AGAT (GAUCHE - parce que second) -->
-                                    <div class="mr-[56%] w-[42%] relative">
-                                        <div class="relative bg-white border border-gray-300 shadow-lg p-6 rounded-lg">
-                                            <!-- Flèche DROITE -->
-                                            <div class="absolute right-[-10px] top-[45px] w-0 h-0 border-t-[10px] border-b-[10px] border-l-[10px] border-transparent border-l-gray-300"></div>
-                                            
-                                            <h3 class="text-2xl font-semibold mb-2">Assistant de laboratoire</h3>
-                                            <p class="text-lg font-medium text-gray-700">AGAT Laboratoire</p>
-                                            <p class="text-sm text-gray-500 mb-4">Mai 2024 – Présent</p>
-                                            <ul class="list-disc ml-5 space-y-2 text-gray-700">
-                                                <li>Préparation d'échantillons selon les protocoles de laboratoire.</li>
-                                                <li>Utilisation d'instruments de mesure et logiciels d'analyse scientifique.</li>
-                                                <li>Gestion de la logistique</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="bg-white p-6 rounded-lg border border-black">
+                                    <h3 class="text-2xl font-semibold mb-2">WiFi-Map Analyzer (Java)</h3>
+                                    <p> Application de cartographie et analyse de réseaux WiFi développée en Java. Le programme scanne les points d'accès disponibles, 
+                                        mesure la force du signal RSSI en décibels, et génère des cartes thermiques interactives pour visualiser la couverture réseau. 
+                                        J'ai implémenté des algorithmes d'optimisation utilisant des structures de données avancées (arbres binaires, tables de hachage) pour recommander les meilleurs emplacements d'antennes. 
+                                        L'interface graphique Swing permet l'export des données en formats CSV et JSON pour analyse ultérieure.
+                                    </p>
                                 </div>
-                                <!-- FIN BLOC AGAT -->
-                                
+                                <div class="bg-white p-6 rounded-lg border border-black">
+                                    <h3 class="text-2xl font-semibold mb-2">Automatisation de Données (Python/C++)</h3>
+                                    <p> Système d'extraction et transformation de données combinant Python et C++ pour le traitement haute performance. J'ai développé des robots Python qui collectent des données sur le web. 
+                                        Les données sont ensuite nettoyées et analysées par un moteur C++ optimisé , avec génération de rapports PDF automatiques contenant des visualisations de tendances.
+                                    </p>
+                                </div>
+                                <div class="bg-white p-6 rounded-lg border border-black">
+                                    <h3 class="text-2xl font-semibold mb-2">Jeu de Scrabble</h3>
+                                    <p> Jeu de Scrabble en Python développé pour un projet d'algorithmique. J'ai implémenté la logique fondamentale du jeu avec un système de plateau interactif, gestion des lettres disponibles,
+                                        et validation des mots à l'aide d'un dictionnaire intégré. Le programme permet de calculer les scores en respectant les cases spéciales (lettre/ mot compte double/triple) et
+                                        inclut une interface en ligne de commande intuitive pour deux joueurs.
+                                    </p>
+                                </div>
+                                <div class="bg-white p-6 rounded-lg border border-black">
+                                    <h3 class="text-2xl font-semibold mb-2">Gestion des Élections (C++)</h3>
+                                    <p> Programme de simulation électorale utilisant les concepts avancés de la POO. J'ai modélisé une circonscription avec héritage (candidats, partis politiques, bureaux de vote) et 
+                                        polymorphisme pour différents types de scrutins (majoritaire, proportionnel). L'interface Qt offre des visualisations graphiques des résultats (diagrammes circulaires, cartes choroplèthes). 
+                                        Le projet inclut une suite complète de tests unitaires avec Google Test couvrant 95% du code.
+                                    </p>
+                                </div>
+                                <div class="bg-white p-6 rounded-lg border border-black">
+                                    <h3 class="text-2xl font-semibold mb-2">Creation d'une plateforme de banque virtuelle (Python)</h3>
+                                    <p>  Application de gestion bancaire simplifiée avec interface en ligne de commande et base de données. J'ai implémenté les opérations bancaires fondamentales : création de compte,
+                                         virements sécurisés avec vérification des soldes, historiques de transactions consultables, 
+                                         et calcul des intérêts mensuels. Le système inclut un module de sécurité avec hachage des mots de passe. 
+                                         L'interface utilise des menus intuitifs avec validation en temps réel des saisies.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
+                
+                <!-- Colonne de droite (Compétences, Formation, Certification) -->
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-semibold mb-4">Compétences</h3>
                     <div class="space-y-4">
@@ -187,7 +174,7 @@
                         </div>
                         <div>
                             <span class="font-medium">C#</span>
-                            <div class="progress-bar"><div class="progress" style="width: 20%"></div></div>
+                            <div class="progress-bar"><div class="progress" style="width: 50%"></div></div>
                         </div>
                         <div>
                             <span class="font-medium">HTML & CSS</span>
@@ -198,11 +185,12 @@
                             <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
                         </div>
                     </div>
+                    
                     <h3 class="text-2xl font-semibold mt-8 mb-4">Formation</h3>
                     <div class="bg-white p-6 rounded-lg border border-black mb-6">
                         <h4 class="text-xl font-medium">Baccalauréat en Informatique</h4>
                         <p>Université Laval, Québec</p>
-                        <p>Hiver 2024 - Février 2027</p>
+                        <p>Janvier 2024 - Décembre 2027</p>
                     </div>
 
                     <div class="bg-white p-6 rounded-lg border border-black mb-6">
@@ -211,6 +199,7 @@
                         <a href="CISCO JUNIOR ANALYST .png" class="text-blue-500 hover:underline">Voir le certificat</a>
                         <p>Décembre 2025</p>
                     </div>
+                    
                     <h3 class="text-2xl font-semibold mt-8 mb-4">Certification</h3>
                     <div class="bg-white p-6 rounded-lg border border-black">
                         <h4 class="text-xl font-medium">PreCyberSecurity Certificate TryHackMe</h4>
@@ -221,44 +210,45 @@
             </div>
         </div>
     </section>
+                    <!-- Section Expérience professionnelle -->
+                    <section id="experience" class="py-20 bg-white text-black relative overflow-hidden">
+                        <div class="container mx-auto px-4">
+                            <h2 class="text-4xl font-bold text-center mb-16">Expérience professionnelle</h2>
 
-    <!-- Section Projet-->
-    <section id="projects" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Projets</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">Sports-par-Bus – Système de Gestion de Voyages Sportifs</h3>
-                    <p>Conception d'une base de données normalisée avec SQL/PL-SQL avancé, et développement d'une application web PHP sécurisée pour la gestion multi-utilisateurs des réservations.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">WiFi-Map Analyzer (Java)</h3>
-                    <p>Cartographie des points d'accès WiFi avec calcul de la force du signal, utilisant des structures de données pour optimiser les résultats.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">Portfolio Photographe (HTML/CSS)</h3>
-                    <p>Développement du front-end d'un site web pour un portfolio de photographe, avec un design responsive et une intégration fluide.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">Automatisation de Données (Python/C++)</h3>
-                    <p>Extraction de données via APIs et nettoyage de datasets pour une analyse efficace.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">Jeu de Scrabble (Projet de cours)</h3>
-                    <p>Conception et implémentation d'un jeu de Scrabble en équipe, avec interface utilisateur et logique de jeu.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">Gestion des Élections (C++)</h3>
-                    <p>Développement d'un programme avec héritage et polymorphisme pour modéliser une circonscription électorale, incluant interface graphique Qt et tests unitaires avec Google Test.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-black">
-                    <h3 class="text-2xl font-semibold mb-2">Creation d'une plateforme de banque virtuelle (Python)</h3>
-                    <p>developement d'une application d'envoie et de retrait d'argent avec un interface simple et intuitif</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                            <div class="relative max-w-5xl mx-auto">
+                                <!-- Ligne verticale centrale -->
+                                <div class="absolute left-1/2 transform -translate-x-1/2 bg-gray-400 w-[3px] h-[220%] rounded-full"></div>
 
+                                <!-- ===== BLOC SUCCÈS SCOLAIRES (PLUS RÉCENT - DROITE) ===== -->
+                                <div class="relative flex items-center mb-32">
+                                    <!-- Logo Succès Scolaires -->
+                                    <div class="absolute left-[49.8%] top-[45px] transform -translate-x-1/2 bg-white w-18 h-18 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-md z-20">
+                                        <img src="LOGO FINAL.png" alt="Succès Scolaires" class="w-10 h-10 object-cover rounded-full">
+                                    </div>
+                                    
+                                    <!-- Carte Succès Scolaires (DROITE) -->
+                                    <div class="ml-[56%] w-[42%] relative">
+                                        <div class="relative bg-white border border-gray-300 shadow-lg p-6 rounded-lg">
+                                            <!-- Flèche GAUCHE -->
+                                            <div class="absolute left-[-10px] top-[45px] w-0 h-0 border-t-[10px] border-b-[10px] border-r-[10px] border-transparent border-r-gray-300"></div>
+                                            
+                                            <h3 class="text-2xl font-semibold mb-2">Tuteur en mathématiques et physiques</h3>
+                                            <p class="text-lg font-medium text-gray-700">Succès scolaire</p>
+                                            <p class="text-sm text-gray-500 mb-4">Novembre 2025 – Présent</p>
+                                            <ul class="list-disc ml-5 space-y-2 text-gray-700">
+                                                <li>Enseignement individualisé des mathématiques aux élèves</li>
+                                                <li>Création de plans d'apprentissage personnalisés.</li>
+                                                <li>Suivi des progrès et préparation aux examens.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FIN BLOC SUCCÈS SCOLAIRES -->
+
+                                <!-- ===== BLOC AGAT (MOINS RÉCENT - GAUCHE) ===== -->
+                            </div>
+                        </div>
+                    </section>
     <!-- Section Contact -->
     <section id="contact" class="py-20 bg-gray-100 text-black">
       <div class="container mx-auto px-4 max-w-2xl">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,145 +7,70 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #FFFFFF;
-            color: #000000;
-        }
-        .progress-bar {
-            height: 10px;
-            background-color: #e5e7eb; 
-            border-radius: 5px;
-        }
-        .progress {
-            height: 100%;
-            background-color: #000000;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
-    <!-- Navigation -->
+ 
+    <!-- ===================== NAVIGATION ===================== -->
     <header class="fixed w-full z-50">
         <div class="flex justify-between items-center p-4">
-            <!-- Coin gauche -->
-            <div class="text-xl font-light">
-                Roland K. Kpakossou
-            </div>
-            
-            <!-- Coin droit -->
+            <div class="text-xl font-light">Roland K. Kpakossou</div>
+ 
             <nav class="flex space-x-6">
                 <a href="#about" class="hover:opacity-70 transition">Info</a>
                 <a href="#projects" class="hover:opacity-70 transition">Projets</a>
+                <a href="#experience" class="hover:opacity-70 transition">Expérience</a>
                 <a href="#contact" class="hover:opacity-70 transition">Contact</a>
             </nav>
         </div>
     </header>
-
-    <!-- Section Accueil -->
+ 
+    <!-- ===================== ACCUEIL ===================== -->
     <section id="home" class="min-h-screen flex items-center bg-white py-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-12">
-                <!-- Grande image à gauche -->
                 <div class="lg:w-1/2 flex justify-center">
-                    <img src="img_9974.jpg" alt="Roland Kpakossou" 
+                    <img src="img_9974.jpg" alt="Roland Kpakossou"
                          class="rounded-lg w-full max-w-sm md:max-w-xl lg:max-w-2xl image-no-border">
                 </div>
-                
-                <!-- Texte à droite -->
+ 
                 <div class="md:w-3/5 text-center md:text-left">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Bonjour, je suis Roland Koko Kpakossou</h1>
-                    <h2 class="text-2xl md:text-3xl mb-8">Étudiant en <span class="typing text-black"></span></h2>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <!-- Bouton Contact -->
-                    <p class="text-lg mb-6">
-                        Je suis un étudiant en troisième année en informatique à l'Université Laval, passionné par le développement logiciel, la cybersécurité, l'analyse de données et les technologies émergentes. Je développe des solutions innovantes en combinant technique rigoureuse et approche méthodique pour résoudre des défis complexes. Explorez mon portfolio pour découvrir mes projets et compétences en développement logiciel et plus encore !
-                    </p>
-                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Bonjour, je suis Roland</h1>
+                    <h2 class="text-xl md:text-2xl mb-6">
+                        Étudiant en <span class="typing text-black"></span>
+                    </h2>
                 </div>
             </div>
-            
-            <!-- Flèche animée au milieu de la page -->
-            <div class="flex justify-center mt-16 md:mt-24">
-                <a href="#about" class="scroll-arrow animate-bounce flex flex-col items-center">
-                    <span class="text-sm text-gray-600 mb-2">Découvrir plus</span>
-                    <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+ 
+            <div class="flex justify-center mt-8 md:mt-12">
+                <a href="#about" class="scroll-arrow animate-bounce flex flex-col items-center group">
+                    <span class="text-sm text-gray-600 mb-2 font-medium">Découvrir plus</span>
+                    <svg class="w-12 h-12 text-black group-hover:text-gray-700 transition-colors"
+                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- Section À propos -->
+ 
+    <!-- ===================== À PROPOS ===================== -->
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">À propos</h2>
-            <div class="flex flex-col">
+ 
+            <div class="max-w-3xl mx-auto flex flex-col gap-12">
+ 
+                <!-- Présentation -->
+                <p class="text-lg">
+                    Je suis étudiant en technologies de l'information en troisième année.
+                    Bienvenue sur mon portfolio, où je partage mes projets et ma passion pour
+                    la programmation. Explorez et découvrez comment le code peut créer quelque
+                    chose de génial !
+                </p>
+ 
+                <!-- Compétences, formation, certifications -->
                 <div>
-                    <p class="text-lg mb-6">
-                        J'ai eu l'opportunité de créer une variété d'applications qui résolvent des problèmes réels. Chaque projet m'a permis d'élargir mes compétences et de travailler avec différentes technologies. De la création d'applications au développement de systèmes backend complexes, mon expérience démontre ma polyvalence et mon engagement envers la qualité.
-                    </p>
-                    
-                    <!-- Section Projets -->
-                    <section id="projects" class="py-20 bg-white">
-                        <div class="container mx-auto px-4">
-                            <h2 class="text-4xl font-bold text-center mb-12">Projets</h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div class="bg-white p-6 rounded-lg border border-black">
-                                    <h3 class="text-2xl font-semibold mb-2">Sports-par-Bus – Système de Gestion de Voyages Sportifs</h3>
-                                    <p>Développement full-stack d'une plateforme web complète permettant aux équipes sportives de gérer leurs déplacements. 
-                                        Conception d'une base de données MySQL normalisée avec des procédures stockées PL-SQL pour optimiser les requêtes complexes. 
-                                        L'application PHP sécurisée implémente un système d'authentification à trois niveaux (administrateur, entraîneur, 
-                                        joueur) avec gestion des réservations en temps réel, génération automatique de factures et tableaux de bord statistiques. 
-                                        Le projet inclut des mesures de sécurité contre les injections SQL et les attaques XSS.
-                                    </p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg border border-black">
-                                    <h3 class="text-2xl font-semibold mb-2">WiFi-Map Analyzer (Java)</h3>
-                                    <p> Application de cartographie et analyse de réseaux WiFi développée en Java. Le programme scanne les points d'accès disponibles, 
-                                        mesure la force du signal RSSI en décibels, et génère des cartes thermiques interactives pour visualiser la couverture réseau. 
-                                        J'ai implémenté des algorithmes d'optimisation utilisant des structures de données avancées (arbres binaires, tables de hachage) pour recommander les meilleurs emplacements d'antennes. 
-                                        L'interface graphique Swing permet l'export des données en formats CSV et JSON pour analyse ultérieure.
-                                    </p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg border border-black">
-                                    <h3 class="text-2xl font-semibold mb-2">Automatisation de Données (Python/C++)</h3>
-                                    <p> Système d'extraction et transformation de données combinant Python et C++ pour le traitement haute performance. J'ai développé des robots Python qui collectent des données sur le web. 
-                                        Les données sont ensuite nettoyées et analysées par un moteur C++ optimisé , avec génération de rapports PDF automatiques contenant des visualisations de tendances.
-                                    </p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg border border-black">
-                                    <h3 class="text-2xl font-semibold mb-2">Jeu de Scrabble</h3>
-                                    <p> Jeu de Scrabble en Python développé pour un projet d'algorithmique. J'ai implémenté la logique fondamentale du jeu avec un système de plateau interactif, gestion des lettres disponibles,
-                                        et validation des mots à l'aide d'un dictionnaire intégré. Le programme permet de calculer les scores en respectant les cases spéciales (lettre/ mot compte double/triple) et
-                                        inclut une interface en ligne de commande intuitive pour deux joueurs.
-                                    </p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg border border-black">
-                                    <h3 class="text-2xl font-semibold mb-2">Gestion des Élections (C++)</h3>
-                                    <p> Programme de simulation électorale utilisant les concepts avancés de la POO. J'ai modélisé une circonscription avec héritage (candidats, partis politiques, bureaux de vote) et 
-                                        polymorphisme pour différents types de scrutins (majoritaire, proportionnel). L'interface Qt offre des visualisations graphiques des résultats (diagrammes circulaires, cartes choroplèthes). 
-                                        Le projet inclut une suite complète de tests unitaires avec Google Test couvrant 95% du code.
-                                    </p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg border border-black">
-                                    <h3 class="text-2xl font-semibold mb-2">Creation d'une plateforme de banque virtuelle (Python)</h3>
-                                    <p>  Application de gestion bancaire simplifiée avec interface en ligne de commande et base de données. J'ai implémenté les opérations bancaires fondamentales : création de compte,
-                                         virements sécurisés avec vérification des soldes, historiques de transactions consultables, 
-                                         et calcul des intérêts mensuels. Le système inclut un module de sécurité avec hachage des mots de passe. 
-                                         L'interface utilise des menus intuitifs avec validation en temps réel des saisies.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                
-                <!-- Colonne de droite (Compétences, Formation, Certification) -->
-                <div class="md:w-1/2">
                     <h3 class="text-2xl font-semibold mb-4">Compétences</h3>
                     <div class="space-y-4">
                         <div>
@@ -161,12 +86,8 @@
                             <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
                         </div>
                         <div>
-                            <span class="font-medium">C</span>
+                            <span class="font-medium">.NET</span>
                             <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
-                        </div>
-                        <div>
-                            <span class="font-medium">Php</span>
-                            <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
                         </div>
                         <div>
                             <span class="font-medium">SQL</span>
@@ -177,153 +98,201 @@
                             <div class="progress-bar"><div class="progress" style="width: 50%"></div></div>
                         </div>
                         <div>
-                            <span class="font-medium">HTML & CSS</span>
+                            <span class="font-medium">HTML &amp; CSS</span>
                             <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
                         </div>
                         <div>
-                            <span class="font-medium">JAVASCRIPT</span>
+                            <span class="font-medium">JavaScript</span>
                             <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
                         </div>
                     </div>
-                    
+ 
                     <h3 class="text-2xl font-semibold mt-8 mb-4">Formation</h3>
+ 
                     <div class="bg-white p-6 rounded-lg border border-black mb-6">
                         <h4 class="text-xl font-medium">Baccalauréat en Informatique</h4>
                         <p>Université Laval, Québec</p>
-                        <p>Janvier 2024 - Décembre 2027</p>
+                        <p>Janvier 2024 - Juillet 2027</p>
                     </div>
-
+ 
                     <div class="bg-white p-6 rounded-lg border border-black mb-6">
                         <h4 class="text-xl font-medium">Junior CyberSecurity Analyst</h4>
                         <p>Cisco Networking Academy</p>
                         <a href="CISCO JUNIOR ANALYST .png" class="text-blue-500 hover:underline">Voir le certificat</a>
                         <p>Décembre 2025</p>
                     </div>
-                    
+ 
                     <h3 class="text-2xl font-semibold mt-8 mb-4">Certification</h3>
+ 
                     <div class="bg-white p-6 rounded-lg border border-black">
                         <h4 class="text-xl font-medium">PreCyberSecurity Certificate TryHackMe</h4>
-                        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-QU6I4E0VHF.pdf" class="text-blue-500 hover:underline">Voir le certificat</a>
+                        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-QU6I4E0VHF.pdf"
+                           class="text-blue-500 hover:underline">Voir le certificat</a>
                         <p>Décembre 2025</p>
                     </div>
                 </div>
+ 
             </div>
         </div>
     </section>
-                    <!-- Section Expérience professionnelle -->
-                    <section id="experience" class="py-20 bg-white text-black relative overflow-hidden">
-                        <div class="container mx-auto px-4">
-                            <h2 class="text-4xl font-bold text-center mb-16">Expérience professionnelle</h2>
-
-                            <div class="relative max-w-5xl mx-auto">
-                                <!-- Ligne verticale centrale -->
-                                <div class="absolute left-1/2 transform -translate-x-1/2 bg-gray-400 w-[3px] h-[220%] rounded-full"></div>
-
-                                <!-- ===== BLOC SUCCÈS SCOLAIRES (PLUS RÉCENT - DROITE) ===== -->
-                                <div class="relative flex items-center mb-32">
-                                    <!-- Logo Succès Scolaires -->
-                                    <div class="absolute left-[49.8%] top-[45px] transform -translate-x-1/2 bg-white w-18 h-18 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-md z-20">
-                                        <img src="LOGO FINAL.png" alt="Succès Scolaires" class="w-10 h-10 object-cover rounded-full">
-                                    </div>
-                                    
-                                    <!-- Carte Succès Scolaires (DROITE) -->
-                                    <div class="ml-[56%] w-[42%] relative">
-                                        <div class="relative bg-white border border-gray-300 shadow-lg p-6 rounded-lg">
-                                            <!-- Flèche GAUCHE -->
-                                            <div class="absolute left-[-10px] top-[45px] w-0 h-0 border-t-[10px] border-b-[10px] border-r-[10px] border-transparent border-r-gray-300"></div>
-                                            
-                                            <h3 class="text-2xl font-semibold mb-2">Tuteur en mathématiques et physiques</h3>
-                                            <p class="text-lg font-medium text-gray-700">Succès scolaire</p>
-                                            <p class="text-sm text-gray-500 mb-4">Novembre 2025 – Présent</p>
-                                            <ul class="list-disc ml-5 space-y-2 text-gray-700">
-                                                <li>Enseignement individualisé des mathématiques aux élèves</li>
-                                                <li>Création de plans d'apprentissage personnalisés.</li>
-                                                <li>Suivi des progrès et préparation aux examens.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FIN BLOC SUCCÈS SCOLAIRES -->
-
-                                <!-- ===== BLOC AGAT (MOINS RÉCENT - GAUCHE) ===== -->
-                            </div>
+ 
+    <!-- ===================== PROJETS ===================== -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Projets récents</h2>
+ 
+            <div class="flex flex-col gap-8 max-w-4xl mx-auto">
+ 
+                <!-- Projet 1 : Sports-par-Bus -->
+                <article class="bg-white rounded-lg border border-black overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">
+                            Sports-par-Bus – Système de Gestion de Voyages Sportifs
+                        </h3>
+                        <p>
+                            Développement full-stack d'une plateforme web complète permettant aux
+                            équipes sportives de gérer leurs déplacements. Conception d'une base de
+                            données MySQL normalisée avec des procédures stockées PL-SQL pour
+                            optimiser les requêtes complexes. L'application PHP sécurisée implémente
+                            un système d'authentification à trois niveaux (administrateur, entraîneur,
+                            joueur) avec gestion des réservations en temps réel, génération automatique
+                            de factures et tableaux de bord statistiques. Le projet inclut des mesures
+                            de sécurité contre les injections SQL et les attaques XSS.
+                        </p>
+                    </div>
+                    <img src="sport-par-bus.png" alt="Interface de Sports-par-Bus" class="w-full h-auto">
+                </article>
+ 
+                <!-- Projet 2 : WiFi-Map Analyzer -->
+                <article class="bg-white rounded-lg border border-black overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">WiFi-Map Analyzer (Java)</h3>
+                        <p>
+                            Application de cartographie et analyse de réseaux WiFi développée en Java.
+                            Le programme scanne les points d'accès disponibles, mesure la force du
+                            signal RSSI en décibels, et génère des cartes thermiques interactives pour
+                            visualiser la couverture réseau. J'ai implémenté des algorithmes
+                            d'optimisation utilisant des structures de données avancées (arbres binaires,
+                            tables de hachage) pour recommander les meilleurs emplacements d'antennes.
+                            L'interface graphique Swing permet l'export des données.
+                        </p>
+                    </div>
+                    <img src="capture2.png" alt="Interface de WiFi-Map Analyzer" class="w-full h-auto">
+                    <img src="capture1.png" alt="Interface de WiFi-Map Analyzer" class="w-full h-auto">
+                </article>
+ 
+            </div>
+        </div>
+    </section>
+ 
+    <!-- ===================== EXPÉRIENCE PROFESSIONNELLE ===================== -->
+    <section id="experience" class="py-20 bg-white text-black relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Expérience professionnelle</h2>
+ 
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Ligne verticale centrale -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 bg-gray-400 w-[3px] h-[220%] rounded-full"></div>
+ 
+                <!-- Tutorat - Succès scolaire (le plus récent) -->
+                <div class="relative flex items-center mb-32">
+                    <div class="absolute left-[49.8%] top-[45px] transform -translate-x-1/2 bg-white w-18 h-18 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-md z-20">
+                        <img src="LOGO FINAL.png" alt="Succès Scolaires" class="w-10 h-10 object-cover rounded-full">
+                    </div>
+ 
+                    <div class="ml-[56%] w-[42%] relative">
+                        <div class="relative bg-white border border-gray-300 shadow-lg p-6 rounded-lg">
+                            <div class="absolute left-[-10px] top-[45px] w-0 h-0 border-t-[10px] border-b-[10px] border-r-[10px] border-transparent border-r-gray-300"></div>
+ 
+                            <h3 class="text-2xl font-semibold mb-2">Tuteur en mathématiques et physiques</h3>
+                            <p class="text-lg font-medium text-gray-700">Succès scolaire</p>
+                            <p class="text-sm text-gray-500 mb-4">Novembre 2025 – Présent</p>
+                            <ul class="list-disc ml-5 space-y-2 text-gray-700">
+                                <li>Enseignement individualisé des mathématiques aux élèves</li>
+                                <li>Création de plans d'apprentissage personnalisés</li>
+                                <li>Suivi des progrès et préparation aux examens</li>
+                            </ul>
                         </div>
-                    </section>
-    <!-- Section Contact -->
-    <section id="contact" class="py-20 bg-gray-100 text-black">
-      <div class="container mx-auto px-4 max-w-2xl">
-        <div class="bg-white border border-gray-300 p-10 rounded-2xl shadow-md">
-          <p class="uppercase tracking-widest text-sm text-gray-500 mb-2">Prendre contact</p>
-          <h2 class="text-5xl font-extrabold mb-10 text-black">Contact<span class="text-gray-600">.</span></h2>
-
-          <form action="https://formspree.io/f/mnngobjb" method="POST" class="space-y-6">
-            <!-- Nom -->
-            <div>
-              <label for="name" class="block text-sm font-semibold mb-2">Votre Nom</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                placeholder="Quel est votre nom ? " 
-                required
-                class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-              >
+                    </div>
+                </div>
+ 
+                <!-- IT Consultant - MIB Service -->
+                <div class="relative flex items-center mb-20">
+                    <div class="absolute left-[49.8%] top-[45px] transform -translate-x-1/2 bg-white w-18 h-18 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-md z-20">
+                        <img src="mib.jpg" alt="MIB SERVICE" class="w-10 h-10 object-cover rounded-full">
+                    </div>
+ 
+                    <div class="ml-[56%] w-[42%] relative">
+                        <div class="relative bg-white border border-gray-300 shadow-lg p-6 rounded-lg">
+                            <div class="absolute left-[-10px] top-[45px] w-0 h-0 border-t-[10px] border-b-[10px] border-r-[10px] border-transparent border-r-gray-300"></div>
+ 
+                            <h3 class="text-2xl font-semibold mb-2">IT Consultant &amp; Programmeur Analyste</h3>
+                            <p class="text-lg font-medium text-gray-700">MIB SERVICE SARL</p>
+                            <p class="text-sm text-gray-500 mb-4">Avril 2026 – Juin 2026 · À distance (Lomé, Togo)</p>
+                            <ul class="list-disc ml-5 space-y-2 text-gray-700">
+                                <li>Animation d'ateliers de co-création avec les équipes opérationnelles pour identifier et prioriser les indicateurs clés de performance adaptés aux besoins métier</li>
+                                <li>Conception de maquettes fonctionnelles de tableaux de bord avec Figma</li>
+                                <li>Élaboration et validation de 3 logiques de visualisation répondant aux besoins spécifiques de chaque service</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+ 
             </div>
-
-            <!-- Email -->
-            <div>
-              <label for="email" class="block text-sm font-semibold mb-2">Votre Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="Quel est votre email ? " 
-                required
-                class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-              >
-            </div>
-
-            <!-- Message -->
-            <div>
-              <label for="message" class="block text-sm font-semibold mb-2">Votre Message</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="5"
-                placeholder="Écrivez votre message ..." 
-                required
-                class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-              ></textarea>
-            </div>
-
-            <!-- Bouton -->
-            <button 
-              type="submit"
-              class="bg-black hover:bg-gray-800 text-white px-10 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              Envoyer
-            </button>
-          </form>
         </div>
-      </div>
     </section>
-
-    <!-- Section Admin (cachée) pour voir les statistiques -->
-    <div id="admin-stats" class="fixed bottom-4 right-4 bg-black text-white p-4 rounded-lg shadow-lg hidden z-50">
-        <h3 class="font-bold mb-2 text-sm">Statistiques du site</h3>
-        <p class="text-xs">Visites totales: <span id="visit-count" class="font-bold">0</span></p>
-        <p class="text-xs">Visites uniques: <span id="unique-visits" class="font-bold">0</span></p>
-        <div class="flex space-x-2 mt-2">
-            <button onclick="hideStats()" class="text-xs bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">Fermer</button>
-            <button onclick="resetCounter()" class="text-xs bg-red-600 px-2 py-1 rounded hover:bg-red-500">Reset</button>
+ 
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="py-20 bg-gray-100 text-black">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <div class="bg-white border border-gray-300 p-10 rounded-2xl shadow-md">
+                <p class="uppercase tracking-widest text-sm text-gray-500 mb-2">Prendre contact</p>
+                <h2 class="text-5xl font-extrabold mb-10 text-black">Contact<span class="text-gray-600">.</span></h2>
+ 
+                <form action="https://formspree.io/f/mnngobjb" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold mb-2">Votre Nom</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Quel est votre nom ?"
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black">
+                    </div>
+ 
+                    <div>
+                        <label for="email" class="block text-sm font-semibold mb-2">Votre Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Quel est votre email ?"
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black">
+                    </div>
+ 
+                    <div>
+                        <label for="message" class="block text-sm font-semibold mb-2">Votre Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Écrivez votre message..."
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"></textarea>
+                    </div>
+ 
+                    <button
+                        type="submit"
+                        class="bg-black hover:bg-gray-800 text-white px-10 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+                        Envoyer
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <!-- Bouton d'accès admin (caché) -->
-    <button id="admin-btn" onclick="showAdminPanel()" class="fixed bottom-4 left-4 bg-gray-800 text-white p-3 rounded-full opacity-50 hover:opacity-100 transition z-50">
-        🔍
-    </button>
-
+    </section>
+ 
     <script src="script.js"></script>
 </body>
 </html>
